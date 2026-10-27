@@ -1,0 +1,101 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>tugas pilihan</title>
+</head>
+<body>
+
+<marquee behavior="alternate"><h1>Profile diri sendiri</h1></marquee>
+
+<p><b>Nama :</b> Muhammad Arif Abdurohman</p>
+<p><b>Kelas :</b> 11 TKJ 2</p>
+
+<p>Deskripsi sekolah <br>SMKN 1 KAB TANGERANG</p>
+
+<img src="foto/logoceer.jpg" alt="logo sekolah" width="120" />
+
+<p>Status & Akreditasi: SMK Negeri 1 Kabupaten Tangerang adalah sekolah kejuruan negeri yang telah memiliki akreditasi A.</p>
+<p>Karakteristik: Sekolah ini berbasis ketarunaan.</p>
+<p>Berlokasi di Kecamatan Panongan, Kabupaten Tangerang.</p>
+ 
+<p>Kunjungi <a href="https://www.smkn1kabtangerang.sch.id/" target="_blank">website resmi</a> SMKN 1 Kab Tangerang</p>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr>
+  <th>NO</th>
+  <th>senin</th>
+  <th>selasa</th>
+  <th>rabu</th>
+  <th>kamis</th>
+  <th>jumat</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td>PKK</td>
+  <td>Bahasa Indonesia</td>
+  <td>Bahasa Inggris</td>
+  <td>TKJ</td>
+  <td>Mulok</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Sejarah Indonesia</td>
+  <td>PAI</td>
+  <td>TKJ</td>
+  <td>PKN</td>
+  <td>PKK</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Matematika</td>
+  <td>Pilihan</td>
+  <td></td>
+  <td>PJOK</td>
+  <td>TKJ</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>TKJ</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+</table>
+
+<br>
+
+<form id="waForm">
+    <label>Nama lengkap:</label><br>
+    <input type="text" id="nama" placeholder="Masukkan nama kamu"><br><br>
+
+    <label>Asal sekolah:</label><br>
+    <input type="text" id="sekolah" placeholder="Masukkan asal sekolah"><br><br>
+
+    <!-- Tombol untuk kirim ke WhatsApp -->
+    <button type="button" onclick="kirimKeWA()">Kirim ke WhatsApp</button>
+</form>
+
+<script>
+function kirimKeWA() {
+    var nama = document.getElementById('nama').value;
+    var sekolah = document.getElementById('sekolah').value;
+    
+    var nomorWA = "6285175201093"; 
+    
+    var pesan = "Halo, saya ingin mendaftar.%0A" +
+                "Nama: " + encodeURIComponent(nama) + "%0A" +
+                "Asal Sekolah: " + encodeURIComponent(sekolah);
+    
+    window.open("https://wa.me/" + nomorWA + "?text=" + pesan, "_blank");
+}
+</script>
+
+<p>Sebutkan fungsi elemen img, a, table, dan form yang kamu gunakan dalam tugas tersebut!</p>
+
+<p>
+img untuk menambahkan gambar (logo sekolah), a untuk membuat link agar bisa di click, table untuk membuat table supaya rapi dan form mengambil data dari peserta pendaftaran
+</p>
+
+</body>
+</html>
